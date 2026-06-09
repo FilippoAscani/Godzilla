@@ -4,6 +4,7 @@ import com.example.godzilla.bean.RegisterArtistBean;
 import com.example.godzilla.bean.RegisterSpectatorBean;
 import com.example.godzilla.bean.RegisterSponsorBean;
 import com.example.godzilla.bean.RegisterUserBean;
+import com.example.godzilla.exceptions.ItemNotFoundException;
 import com.example.godzilla.model.entity.Artist;
 import com.example.godzilla.model.entity.Spectator;
 import com.example.godzilla.model.entity.Sponsor;
@@ -25,20 +26,20 @@ public class UserFactory {
                 return buildSpectator((RegisterSpectatorBean) req);
 
             default:
-                throw new Exception("Ruolo non supportato");
+                throw new ItemNotFoundException("Ruolo non supportato");
         }
     }
 
     private Artist buildArtist(RegisterArtistBean req) {
 
         Artist artist = new Artist(
-
-        req.getId(),
-        req.getUsername(),
-        req.getPassword(),
-        req.getEmail(),
-        req.getRole()
-
+                req.getId(),
+                req.getUsername(),
+                req.getPassword(),
+                req.getEmail(),
+                req.getRole(),
+                req.getBiography(),
+                req.getType()
         );
 
 
