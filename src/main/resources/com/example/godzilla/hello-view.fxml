@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.godzilla.controller.gui.ControllerGui">
+    <TableView fx:id="requestsTable" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="titoloColumn" text="Titolo"/>
+            <TableColumn fx:id="capColumn" text="Capienza"/>
+            <TableColumn fx:id="tipoColumn" text="Tipo"/>
+            <TableColumn fx:id="actionsColumn" text="Azioni"/>
+        </columns>
+    </TableView>
+</VBox>
